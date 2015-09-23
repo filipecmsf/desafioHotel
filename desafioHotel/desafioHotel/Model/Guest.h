@@ -15,6 +15,9 @@ typedef enum : NSUInteger {
 
 @interface Guest : NSObject
 
+@property (nonatomic, assign) TypeGuest type;
+@property (nonatomic, strong) NSArray *days;
+
 - (instancetype)initWithString:(NSString *) guestData;
 
 @end

@@ -11,6 +11,10 @@
 
 @interface Hotel : NSObject
 
+@property (nonatomic, assign) int stars;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) HotelPrices *hotelPrices;
+
 - (instancetype)initWithDictionary:(NSDictionary *) dict;
 
 @end

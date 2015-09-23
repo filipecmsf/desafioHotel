@@ -10,12 +10,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "desafioHotel/Control/HotelControl.m"
-            timestampString = "464663466.665758"
+            timestampString = "464671561.368449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "-loadDataFromPlists"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "-checkBestHotelChoice"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "desafioHotel/Control/HotelControl.m"
+            timestampString = "464671713.295391"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "-getPriceForDay:withGuestType:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

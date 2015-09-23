@@ -23,11 +23,11 @@
     self.hotelControl = [[HotelControl alloc] init];
     
     [self.hotelControl loadDataFromPlists];
+    [self.hotelControl checkBestHotelChoice];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

@@ -10,10 +10,6 @@
 
 @interface Hotel()
 
-@property (nonatomic, assign) int stars;
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) HotelPrices *hotelPrices;
-
 @end
 
 @implementation Hotel

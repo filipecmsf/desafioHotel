@@ -10,9 +10,6 @@
 
 @interface Guest()
 
-@property (nonatomic, assign) TypeGuest type;
-@property (nonatomic, strong) NSArray *time;
-
 @end
 
 @implementation Guest
@@ -33,7 +30,7 @@
             }
             
             NSString *timeString = [arr objectAtIndex:1];
-            self.time = [timeString componentsSeparatedByString:@","];
+            self.days = [timeString componentsSeparatedByString:@","];
             
         }
     }
