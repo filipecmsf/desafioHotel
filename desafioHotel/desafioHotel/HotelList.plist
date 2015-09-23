@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>The Carlyle</string>
+		<key>stars</key>
+		<integer>3</integer>
+		<key>prices</key>
+		<dict>
+			<key>weekday_vip</key>
+			<integer>80</integer>
+			<key>weekday_regular</key>
+			<integer>110</integer>
+			<key>weekend_vip</key>
+			<integer>80</integer>
+			<key>weekend_regular</key>
+			<integer>90</integer>
+		</dict>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>The Plaza</string>
+		<key>stars</key>
+		<integer>4</integer>
+		<key>prices</key>
+		<dict>
+			<key>weekday_vip</key>
+			<integer>110</integer>
+			<key>weekday_regular</key>
+			<integer>160</integer>
+			<key>weekend_vip</key>
+			<integer>50</integer>
+			<key>weekend_regular</key>
+			<integer>60</integer>
+		</dict>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Royal Hotel</string>
+		<key>stars</key>
+		<integer>5</integer>
+		<key>prices</key>
+		<dict>
+			<key>weekday_vip</key>
+			<integer>100</integer>
+			<key>weekday_regular</key>
+			<integer>220</integer>
+			<key>weekend_vip</key>
+			<integer>40</integer>
+			<key>weekend_regular</key>
+			<integer>150</integer>
+		</dict>
+	</dict>
+</array>
+</plist>
