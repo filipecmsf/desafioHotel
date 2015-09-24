@@ -17,7 +17,8 @@
 
 @property (nonatomic, strong) NSArray *hotelList;
 @property (nonatomic, strong) NSArray *guestList;
-@property (nonatomic, strong) NSMutableDictionary *priceDict;
+@property (nonatomic, strong) NSMutableDictionary *hotelPriceDict;
+@property (nonatomic, strong) NSMutableArray *priceDict;
 
 @end
 
@@ -25,7 +26,7 @@
 
 - (void)loadDataFromPlists{
     
-    self.priceDict = [[NSMutableDictionary alloc] init];
+    self.hotelPriceDict = [[NSMutableDictionary alloc] init];
     
     [self loadPlistWithName:HOTEL_LIST_NAME];
     [self loadPlistWithName:GUEST_LIST_NAME];
@@ -33,15 +34,36 @@
 
 - (NSArray *)checkBestHotelChoice{
     
+    self.priceDict = [[NSMutableArray alloc] initWithCapacity:self.guestList.count];
+    
     for (Guest *guest in self.guestList) {
         for (NSString *fullday in guest.days) {
             [self getPriceForDay:[self getWeekDay:fullday] withGuestType:guest.type];
         }
-        NSLog(@"teste");
+        [self getBestHotel];
+        
+        self.hotelPriceDict = [[NSMutableDictionary alloc] init];
     }
-    return nil;
+    return self.priceDict;
 }
 
+- (void) getBestHotel{
+    int bestPrice = 0;
+    Hotel *bestHotel;
+    for (int i = 0; i < self.hotelList.count; i++){
+        Hotel *hotel = [self.hotelList objectAtIndex:i];
+        int total = [[self.hotelPriceDict objectForKey:hotel.name] intValue];
+        
+        if(bestPrice == 0 || bestPrice > total || (bestPrice == total && bestHotel.stars < hotel.stars)){
+            bestHotel = hotel;
+            bestPrice = total;
+        }
+    }
+    
+    NSString *bestOptionString = [NSString stringWithFormat:@"%@: R$%i",bestHotel.name, bestPrice];
+    [self.priceDict addObject:bestOptionString];
+    
+}
 
 #pragma mark - check data methods
 
@@ -85,7 +107,7 @@
     
     for (Hotel *hotel in self.hotelList) {
         
-        int totalPrice = [[self.priceDict objectForKey:hotel.name] intValue];
+        int totalPrice = [[self.hotelPriceDict objectForKey:hotel.name] intValue];
         
         switch (typePrice) {
             case 0:
@@ -104,7 +126,7 @@
                 totalPrice += hotel.hotelPrices.weekend_vip;
                 break;
         }
-        [self.priceDict setObject:[NSNumber numberWithInt:totalPrice] forKey:hotel.name];
+        [self.hotelPriceDict setObject:[NSNumber numberWithInt:totalPrice] forKey:hotel.name];
     }
     
 
@@ -131,7 +153,7 @@
         Hotel *hotel = [[Hotel alloc] initWithDictionary:hotelDict];
         [arr addObject:hotel];
         
-        [self.priceDict setObject:[NSNumber numberWithInt:0] forKey:hotel.name];
+        [self.hotelPriceDict setObject:[NSNumber numberWithInt:0] forKey:hotel.name];
     }
     
     self.hotelList = arr;

@@ -25,7 +25,8 @@
             //define guest type
             self.type = VipGuest;
             
-            if ([[arr objectAtIndex:0] isEqualToString:@"regular"]) {
+            
+            if ([[[[arr objectAtIndex:0] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] lowercaseString] isEqualToString:@"regular"]) {
                 self.type = RegularGuest;
             }
             
