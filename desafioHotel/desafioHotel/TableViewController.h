@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+/*!
+ @file TableViewController
+ @author Filipe Faria
+ @version 1.0
+ */
 @interface TableViewController : UITableViewController
 
 

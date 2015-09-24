@@ -19,7 +19,18 @@
 		8548A03D1BB220310038FE9A /* GuestList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8548A03C1BB220310038FE9A /* GuestList.plist */; settings = {ASSET_TAGS = (); }; };
 		8548A0401BB220FB0038FE9A /* HotelControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8548A03F1BB220FB0038FE9A /* HotelControl.m */; settings = {ASSET_TAGS = (); }; };
 		8548A0431BB228900038FE9A /* HotelPrices.m in Sources */ = {isa = PBXBuildFile; fileRef = 8548A0421BB228900038FE9A /* HotelPrices.m */; settings = {ASSET_TAGS = (); }; };
+		85574BDD1BB44E0B005E1C8E /* HotelControlTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 85574BDC1BB44E0A005E1C8E /* HotelControlTest.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8548A04D1BB38CAB0038FE9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8548A00E1BB218F00038FE9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8548A0151BB218F00038FE9A;
+			remoteInfo = desafioHotel;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8548A0161BB218F00038FE9A /* desafioHotel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desafioHotel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,10 +53,20 @@
 		8548A03F1BB220FB0038FE9A /* HotelControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelControl.m; sourceTree = "<group>"; };
 		8548A0411BB228900038FE9A /* HotelPrices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelPrices.h; sourceTree = "<group>"; };
 		8548A0421BB228900038FE9A /* HotelPrices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelPrices.m; sourceTree = "<group>"; };
+		8548A0481BB38CAB0038FE9A /* desafioHotelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = desafioHotelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8548A04C1BB38CAB0038FE9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85574BDC1BB44E0A005E1C8E /* HotelControlTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelControlTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8548A0131BB218F00038FE9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8548A0451BB38CAB0038FE9A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -59,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				8548A0181BB218F00038FE9A /* desafioHotel */,
+				8548A0491BB38CAB0038FE9A /* desafioHotelTests */,
 				8548A0171BB218F00038FE9A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				8548A0161BB218F00038FE9A /* desafioHotel.app */,
+				8548A0481BB38CAB0038FE9A /* desafioHotelTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +144,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8548A0491BB38CAB0038FE9A /* desafioHotelTests */ = {
+			isa = PBXGroup;
+			children = (
+				8548A04C1BB38CAB0038FE9A /* Info.plist */,
+				85574BDC1BB44E0A005E1C8E /* HotelControlTest.m */,
+			);
+			path = desafioHotelTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +173,24 @@
 			productReference = 8548A0161BB218F00038FE9A /* desafioHotel.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8548A0471BB38CAB0038FE9A /* desafioHotelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8548A04F1BB38CAB0038FE9A /* Build configuration list for PBXNativeTarget "desafioHotelTests" */;
+			buildPhases = (
+				8548A0441BB38CAB0038FE9A /* Sources */,
+				8548A0451BB38CAB0038FE9A /* Frameworks */,
+				8548A0461BB38CAB0038FE9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8548A04E1BB38CAB0038FE9A /* PBXTargetDependency */,
+			);
+			name = desafioHotelTests;
+			productName = desafioHotelTests;
+			productReference = 8548A0481BB38CAB0038FE9A /* desafioHotelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -153,6 +203,11 @@
 					8548A0151BB218F00038FE9A = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = P2KT7G76VC;
+					};
+					8548A0471BB38CAB0038FE9A = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = P2KT7G76VC;
+						TestTargetID = 8548A0151BB218F00038FE9A;
 					};
 				};
 			};
@@ -170,6 +225,7 @@
 			projectRoot = "";
 			targets = (
 				8548A0151BB218F00038FE9A /* desafioHotel */,
+				8548A0471BB38CAB0038FE9A /* desafioHotelTests */,
 			);
 		};
 /* End PBXProject section */
@@ -184,6 +240,13 @@
 				8548A03B1BB21C390038FE9A /* HotelList.plist in Resources */,
 				8548A0261BB218F00038FE9A /* Assets.xcassets in Resources */,
 				8548A0241BB218F00038FE9A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8548A0461BB38CAB0038FE9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +267,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8548A0441BB38CAB0038FE9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85574BDD1BB44E0B005E1C8E /* HotelControlTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8548A04E1BB38CAB0038FE9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8548A0151BB218F00038FE9A /* desafioHotel */;
+			targetProxy = 8548A04D1BB38CAB0038FE9A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8548A0221BB218F00038FE9A /* Main.storyboard */ = {
@@ -330,6 +409,30 @@
 			};
 			name = Release;
 		};
+		8548A0501BB38CAB0038FE9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = desafioHotelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.filipecmsfaria.desafioHotelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/desafioHotel.app/desafioHotel";
+			};
+			name = Debug;
+		};
+		8548A0511BB38CAB0038FE9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = desafioHotelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.filipecmsfaria.desafioHotelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/desafioHotel.app/desafioHotel";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -349,6 +452,16 @@
 				8548A02F1BB218F00038FE9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8548A04F1BB38CAB0038FE9A /* Build configuration list for PBXNativeTarget "desafioHotelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8548A0501BB38CAB0038FE9A /* Debug */,
+				8548A0511BB38CAB0038FE9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

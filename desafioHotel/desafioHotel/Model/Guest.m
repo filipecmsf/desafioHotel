@@ -22,7 +22,7 @@
         NSArray *arr = [guestData componentsSeparatedByString:@":"];
         if([arr count] == 2){
             
-            //define guest type
+            //define o tipo do cliente
             self.type = VipGuest;
             
             

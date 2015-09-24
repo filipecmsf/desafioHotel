@@ -9,10 +9,20 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>desafioHotelTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>8548A0151BB218F00038FE9A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8548A0471BB38CAB0038FE9A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
